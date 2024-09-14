@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Inventario.Models.Marca>
+
+<h1>Marcas</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>País de Origen</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var marca in Model)
+        {
+            <tr>
+                <td>@marca.Id</td>
+                <td>@marca.Nombre</td>
+                <td>@marca.PaisOrigen</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Marcas/Crear" class="btn btn-primary">Agregar Marca</a>

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Inventario.Models.Categoria>
+
+<h1>Categorías</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var categoria in Model)
+        {
+            <tr>
+                <td>@categoria.Id</td>
+                <td>@categoria.Nombre</td>
+                <td>@categoria.Descripcion</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Categorias/Crear" class="btn btn-primary">Agregar Categoría</a>

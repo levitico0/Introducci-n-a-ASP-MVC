@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Inventario.Models.Cliente>
+
+<h1>Clientes</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre Completo</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+
+        {
+            <tr>
+                <td>@cliente.Id</td>
+                <td>@cliente.NombreCompleto</td>
+                <td>@cliente.Email</td>
+                <td>@cliente.Telefono</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Clientes/Crear" class="btn btn-primary">Agregar Cliente</a>

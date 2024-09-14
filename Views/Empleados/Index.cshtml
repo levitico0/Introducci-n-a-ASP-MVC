@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Inventario.Models.Empleado>
+
+<h1>Empleados</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre Completo</th>
+            <th>Cargo</th>
+            <th>Departamento</th>
+            <th>Fecha de Contratación</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var empleado in Model)
+        {
+            <tr>
+                <td>@empleado.Id</td>
+                <td>@empleado.NombreCompleto</td>
+                <td>@empleado.Cargo</td>
+                <td>@empleado.Departamento</td>
+                <td>@empleado.FechaContratacion.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Empleados/Crear" class="btn btn-primary">Agregar Empleado</a>
